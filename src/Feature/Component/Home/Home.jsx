@@ -34,16 +34,17 @@ function Home() {
 
             <div
 
-                className='flex justify-center mt-10 gap-6  text-black text-2xl flex-wrap pt-4 font-extrabold font-Krub '>
+                className='flex justify-center mt-10 gap-9  text-black text-2xl flex-wrap pt-4 font-extrabold font-Krub '>
                 {
                     info.map((item, index) => {
+                        console.log(item)
 
                         return (
-                            <div className="card p-2  w-72 rounded-2xl" key={index} style={{
-                                backgroundImage: `url(${item.backgroundURL})`,
-                                backgroundSize: 'cover',
-                                backgroundRepeat: 'no-repeat',
-                                backgroundPosition: 'center',
+                            <div className="card p-3  w-60 rounded-2xl" key={index} style={{
+                                backgroundColor: item.hex,
+                                // backgroundSize: 'cover',
+                                // backgroundRepeat: 'no-repeat',
+                                // backgroundPosition: 'center',
                             }}>
                                 <div className='flex justify-center mt-6 h-76'>
                                     <img className="rounded-full object-cover" width="200" height="200" src={!item?.mascotURL ? item.mascotURL : "../../../../public/cat.jpg"} />
