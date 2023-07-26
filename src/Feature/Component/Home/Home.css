@@ -1,7 +1,7 @@
 .card {
     transition: transform 1.5s ease;
     &:hover {
-      transform: scale(1.05); /* Increase the scale slightly to make it look closer */
+      transform: scale(1.2); /* Increase the scale slightly to make it look closer */
     }
     
   }

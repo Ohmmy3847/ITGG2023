@@ -35,6 +35,7 @@ function Countdown() {
     };
 
     const interval = setInterval(calculateCountdown, 1000);
+    
 
     return () => clearInterval(interval);
   }, []);
@@ -54,21 +55,37 @@ function Countdown() {
         <Home/>
       ) : (
         <>
-          <div className='divcountdown font-extrabold font-Athiti'>
-            <div className='text-6xl font-extrabold font-Athiti'>Ready for ITGG2023</div>
+          <div className='divcountdown font-bold font-Athiti '>
+            <div className='text-6xl font-bold font-Athit'>IT TOURNAMENT</div>
+            <div className='text-6xl font-bold font-Athiti mt-12'>GATE GAME 2023</div>
             <br></br>
 
             {/* <h1>Countdown to {targetDate.toDateString()}</h1> */}
-            <p>เตรียมพบกับมหกรรมการแข่งขันที่เฟี้ยวฟ้าวที่สุดในไอทีลาดกระบังใน</p>
+           
             
 
-            <div className=" flex justify-center text-6xl pt-8 gap-12 flex-wrap">
-
-              <p >{countdown.days}  วัน </p>
-              <p >{countdown.hours} ชั่วโมง </p>
-              <p >{countdown.minutes} นาที </p>
-              <p >{countdown.seconds} วินาที </p>
+            <div className=" flex justify-center text-8xl mt-24 gap-36 flex-wrap">
+              <div >
+              <p className=' flex justify-center'>{formatNumberWithLeadingZero(countdown.days)}</p>
+              <p className='flex justify-center text-base pt-4'>Days</p>
+              </div>
+              <div>
+              <p className=' flex justify-center'>{formatNumberWithLeadingZero(countdown.hours)}</p>
+              <p className='flex justify-center text-base pt-4'>Hours</p>
+              </div>
+              <div>
+              <p className=' flex justify-center'>{formatNumberWithLeadingZero(countdown.minutes)}</p>
+              <p className='flex justify-center text-base pt-4'>Minutes</p>
+              </div>
+              <div>
+              <p className=' flex justify-center'>{formatNumberWithLeadingZero(countdown.seconds)}</p>
+              <p className='flex justify-center text-base pt-4'>Seconds</p>
+              </div>
+              
+              
             </div>
+            <div className=" flex justify-center text-3xl mt-12 gap-12 flex-wrap">เตรียมพบกับมหกรรมการแข่งขันที่เฟี้ยวฟ้าวที่สุดในไอทีลาดกระบังใน</div>
+            
           </div>
         </>
       )}
@@ -77,5 +94,9 @@ function Countdown() {
 
   );
 };
-
+const formatNumberWithLeadingZero = (number) => {
+  return number.toLocaleString('en-US', { minimumIntegerDigits: 2, useGrouping: false });
+  // Alternatively, you can use string formatting:
+  // return number < 10 ? `0${number}` : `${number}`;
+};
 export default Countdown;

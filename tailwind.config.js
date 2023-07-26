@@ -8,7 +8,8 @@ export default {
     extend: {
 
     fontFamily :{
-      'Athiti': ['sans-serif']
+      'Athiti': ['sans-serif'],
+      'Krub': ["sans-serif"]
     }
     },
   },
