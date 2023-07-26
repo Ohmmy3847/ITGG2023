@@ -14,6 +14,7 @@ function Home() {
     //         console.error('Error occurred:', error.message);
     //     }
     // }
+    
     useEffect(() => {
         async function fetchmyapi() {
             try {
