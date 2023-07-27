@@ -19,43 +19,87 @@ function Home() {
         style: 'currency',
         currency: 'THB',
     })
-    const place = ["ST", "ND", "RD", "TH",]
+    const place = ["st", "nd", "rd", "th",]
+    function sumCoins(arr) {
+        let totalCoins = 0;
+        for (const item of arr) {
+          totalCoins += item.token_amount;
+        }
+        return totalCoins;
+      }
+    const tokensum = sumCoins(info)
+    console.log(tokensum)
+
+    const gradientStyle = {background: 'linear-gradient(110deg, #5F43D0 60%, #F4F1BB 40%)'};
 
     useEffect(() => {
         fetchmyapi()
     }, [])
     return (
-        <><div className=' text-white  md:text-6xl text-4xl font-extrabold mt-14  flex-wrap text-center '>
-            IT TOURNAMENT GATE GAME 2023
+        <>
+        <div className=' text-white justify-center flex flex-row md:text-8xl text-4xl font-extrabold mt-14  flex-wrap text-center '>
+            <p className='font-goblin text-[#61ABFF] '>I</p>
+            <p className='font-goblin text-[#68D4A0] '>T</p>
+            <p className='font-goblin text-[#68D4A0] '>G</p>
+            <p className='font-goblin text-[#68D4A0] md:pr-8'>G</p>
+            <p className='font-goblin md:text-12xl pl-3 text-[#F4F1BB]'>2023</p>
         </div>
-            <div className='text-white sm:text-3xl md:text-2xl font-extrabold mt-7 flex-wrap text-center'>
-                มหาศึกเทพชนเทพที่ใหญ่ที่สุดในลาดกระบัง
+            <div className="font-georgia sm:text-3xl md:text-2xl font-extrabold mt-7 flex-wrap text-center text-[#F4F1BB]">
+            มหกรรมการแข่งขัน ที่ยิ่งใหญ่ที่สุดในไอทีลาดกระบังเริ่มต้นขึ้นแล้ว!!!
             </div>
 
-            <div
+            <div className='flex flex-col w-full pt-24  font-extrabold font-Krub'>
+                <div>
+                    {
+                        info.map((item, index) => {
+                            console.log(item)
+                            if (index == 0) {
 
-                className='flex justify-center mt-10 gap-9  text-black text-2xl flex-wrap pt-4 font-extrabold font-Krub '>
+                            return (
+                                <div className="flex flex-row w-full pt-8 pb-8" key={index} style={{
+                                    background: `linear-gradient(110deg, ${item.hex} 60%, #F4F1BB 40%)`,
+                                  }}>
+                                        <div className='flex flex-col gap-y-4 w-4/5 mx-auto pl-4'>
+                                            <div className=' text-4xl md:text-8xl font-goblin text-[#F4F1BB]'>FIRST PLACE</div>
+                                            <div className='font-goblin text-shadow text-4xl md:text-8xl' style={{color: item.hex}}>FIRST PLACE</div>
+                                            <div className={'text-[#F4F1BB] font-goblin text-2xl md:text-6xl'}>GATE {item.gate_name}</div>
+                                            <div className={'text-shadow font-goblin text-2xl md:text-6xl' } style={{color: item.hex}}>GATE {item.gate_name}</div>
+                                            <div className='pt-4'>
+                                                <div className='flex gap-x-2 text-xl text-white'><span>{THDollor.format(item.token_amount).replace('฿', '').split('.')[0]}</span> <FaCoins className="text-yellow-300" /></div>
+                                                <div className='text-white text-xl'>{(item.token_amount/tokensum * 100).toFixed(0)}% win rate</div>
+                                            </div>
+                                        </div>
+                                        <div className='flex pr-4 bg-cover w-2/5'>
+                                            <img className="" src={"../../../../public/cutecat.png"} />
+                                        </div>
+                                        </div>
+                            )
+                            }
+                        })
+                    }
+                </div>
+                <div className="flex flex-col w-full md:flex-row">
                 {
-                    info.map((item, index) => {
-                        console.log(item)
+                        info.map((item, index) => {
+                            console.log(item)
+                            if (index != 0) {
 
-                        return (
-                            <div className="card p-3  w-60 rounded-2xl" key={index} style={{
-                                backgroundColor: item.hex,
-                                // backgroundSize: 'cover',
-                                // backgroundRepeat: 'no-repeat',
-                                // backgroundPosition: 'center',
-                            }}>
-                                <div className='flex justify-center mt-6 h-76'>
-                                    <img className="rounded-full object-cover" width="200" height="200" src={!item?.mascotURL ? item.mascotURL : "../../../../public/cat.jpg"} />
-                                </div><br />
-                                <p className={`flex justify-center text-4xl bg-white/20 backdrop-blur-[2px] border-b border-t border-gray-300 rounded-b-sm text-slate-800`}>{item.gate_name}</p>
-                                <p className='flex items-center gap-2 justify-center text-3xl mt-2'><span>{THDollor.format(item.token_amount).replace('฿', '').split('.')[0]}</span> <FaCoins className="text-yellow-300" /></p><br />
+                            return (
+                                <div className="flex flex-col gap-y-4 w-full mx-auto pb-8 pt-8" key={index} style={{
+                                    backgroundColor: item.hex,
+                                }}>
+                                    <div className='flex flex-col gap-y-4 w-full items-center'>
+                                        <div className='font-goblin text-4xl text-[#F4F1BB]'>{[index + 1]}{place[index]} PLACE</div>
+                                        <img className="rounded-full bg-[#F4F1BB] w-48 h-48" src={"../../../../public/cutecat.png"} />
+                                        <div className='text-white flex'><span>{THDollor.format(item.token_amount).replace('฿', '').split('.')[0]}</span> <FaCoins className="text-yellow-300" /></div>
+                                        <div className='text-white'>{(item.token_amount/tokensum * 100).toFixed(0)}% winrate</div>
+                                    </div>
                             </div>
-                        )
-                    })
-                }
-
+                            )
+                            }
+                        })
+                    }
+                </div>
             </div>
             {/* <Agenda /> */}
         </>

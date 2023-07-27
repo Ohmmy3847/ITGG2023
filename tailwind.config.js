@@ -9,7 +9,9 @@ export default {
 
     fontFamily :{
       'Athiti': ['sans-serif'],
-      'Krub': ["sans-serif"]
+      'Krub': ["sans-serif"],
+      'goblin': ["Goblin One"],
+      'georgia': ['Georgia', 'serif']
     }
     },
   },

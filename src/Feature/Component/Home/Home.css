@@ -1,11 +1,9 @@
-.card {
-    transition: transform 1.5s  ease-in-out;
-    &:hover {
-      transform: scale(1.2) ; /* Increase the scale slightly to make it look closer */
-    }
-    
+
+
+  .text-shadow {
+    text-shadow: -1px -1px 0 #F4F1BB, 1px -1px 0 #F4F1BB, -1px 1px 0 #F4F1BB, 1px 1px 0 #F4F1BB;
   }
-  .card.hovered ~ .card {
-    opacity: 0;
-    pointer-events: none;
+
+  .grad {
+    background: linear-gradient(110deg, #5F43D0 60%, #F4F1BB 60%);
   }
