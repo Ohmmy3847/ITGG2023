@@ -54,23 +54,25 @@ function Home() {
                         info.map((item, index) => {
                             console.log(item)
                             if (index == 0) {
-
-                            return (
-                                <div className="flex flex-row w-full pt-8 pb-8" key={index} style={{
-                                    background: `linear-gradient(110deg, ${item.hex} 60%, #F4F1BB 40%)`,
-                                  }}>
-                                        <div className='flex flex-col gap-y-4 w-4/5 mx-auto pl-4'>
-                                            <div className=' text-4xl md:text-8xl font-goblin text-[#F4F1BB]'>FIRST PLACE</div>
-                                            <div className='font-goblin text-shadow text-4xl md:text-8xl' style={{color: item.hex}}>FIRST PLACE</div>
-                                            <div className={'text-[#F4F1BB] font-goblin text-2xl md:text-6xl'}>GATE {item.gate_name}</div>
-                                            <div className={'text-shadow font-goblin text-2xl md:text-6xl' } style={{color: item.hex}}>GATE {item.gate_name}</div>
-                                            <div className='pt-4'>
-                                                <div className='flex gap-x-2 text-xl text-white'><span>{THDollor.format(item.token_amount).replace('฿', '').split('.')[0]}</span> <FaCoins className="text-yellow-300" /></div>
-                                                <div className='text-white text-xl'>{(item.token_amount/tokensum * 100).toFixed(0)}% win rate</div>
+                                
+                                return (
+                                    <div className="flex flex-row w-full pt-8 pb-8" key={index} style={{
+                                        background: `linear-gradient(110deg, ${item.hex} 60%, #F4F1BB 40%)`,
+                                    }}>
+                                        <div className='ml-4'>
+                                            <div className='flex flex-col gap-y-4 w-4/5 mx-auto pl-4'>
+                                                <div className=' text-4xl md:text-8xl font-goblin text-[#F4F1BB]'>FIRST PLACE</div>
+                                                <div className='font-goblin text-shadow text-4xl md:text-8xl' style={{color: item.hex}}>FIRST PLACE</div>
+                                                <div className={'text-[#F4F1BB] font-goblin text-2xl md:text-6xl'}>GATE {item.gate_name}</div>
+                                                <div className={'text-shadow font-goblin text-2xl md:text-6xl' } style={{color: item.hex}}>GATE {item.gate_name}</div>
+                                                <div className='pt-4'>
+                                                    <div className='flex gap-x-2 text-xl text-white'><span>{THDollor.format(item.token_amount).replace('฿', '').split('.')[0]}</span> <FaCoins className="text-yellow-300" /></div>
+                                                    <div className='text-white text-xl'>{`${isNaN((item.token_amount/tokensum * 100).toFixed(0)) ? 0 : (item.token_amount/tokensum * 100).toFixed(0) } % winrate`}</div>
+                                                </div>
                                             </div>
                                         </div>
                                         <div className='flex pr-4 bg-cover w-2/5'>
-                                            <img className="" src={"../../../../public/cutecat.png"} />
+                                            <img className="" src={item?.mascotURL ? item.mascotURL : "../../../../public/cutecat.png"} />
                                         </div>
                                         </div>
                             )
@@ -81,7 +83,6 @@ function Home() {
                 <div className="flex flex-col w-full md:flex-row">
                 {
                         info.map((item, index) => {
-                            console.log(item)
                             if (index != 0) {
 
                             return (
@@ -90,9 +91,9 @@ function Home() {
                                 }}>
                                     <div className='flex flex-col gap-y-4 w-full items-center'>
                                         <div className='font-goblin text-4xl text-[#F4F1BB]'>{[index + 1]}{place[index]} PLACE</div>
-                                        <img className="rounded-full bg-[#F4F1BB] w-48 h-48" src={"../../../../public/cutecat.png"} />
-                                        <div className='text-white flex'><span>{THDollor.format(item.token_amount).replace('฿', '').split('.')[0]}</span> <FaCoins className="text-yellow-300" /></div>
-                                        <div className='text-white'>{(item.token_amount/tokensum * 100).toFixed(0)}% winrate</div>
+                                        <img className="flex object-cover w-28 h-28" src={item?.mascotURL ? item.mascotURL : "../../../../public/cutecat.png"} />
+                                        <div className='text-white flex items-center gap-2 justify-center text-2xl'><span>{THDollor.format(item.token_amount).replace('฿', '').split('.')[0]}</span> <FaCoins className="text-yellow-300" /></div>
+                                        <div className='text-white'>{isNaN((item.token_amount/tokensum * 100).toFixed(0)) ? 0 : (item.token_amount/tokensum * 100).toFixed(0)} % winrate</div>
                                     </div>
                             </div>
                             )
