@@ -3,7 +3,7 @@ import Home from "../Home/Home"
 import "./countdown.css"
 
 function Countdown() {
-  const targetDate = new Date('2023-7-23'); // Replace this with your specific target date
+  const targetDate = new Date('2023-8-18'); // Replace this with your specific target date
   const [countdown, setCountdown] = useState({ days: 0, hours: 0, minutes: 0, seconds: 0 });
   const [CountdownReady, setCountdownReady] = useState(false);
 
@@ -51,44 +51,37 @@ function Countdown() {
   }
   return (
     <div>
-      {(countdown.days === 0 && countdown.hours === 0 && countdown.minutes === 0 && countdown.seconds === 0) ? (
-        <Home/>
-      ) : (
+      
         <>
-          <div className='divcountdown font-bold font-Athiti '>
-            <div className='text-6xl font-bold font-Athit'>IT TOURNAMENT</div>
-            <div className='text-6xl font-bold font-Athiti mt-12'>GATE GAME 2023</div>
-            <br></br>
-
-            {/* <h1>Countdown to {targetDate.toDateString()}</h1> */}
-           
+          <div className='text-white font-bold md:mt-20 mt-8'>
             
 
-            <div className=" flex justify-center text-8xl mt-24 gap-36 flex-wrap">
+            <div className=" flex justify-center sm:text-3xl md:text-4xl text-xl md:gap-24 lg:gap-28 lg:text-5xl xl:gap-32 xl:text-6xl gap-4 flex-wrap ">
               <div >
-              <p className=' flex justify-center'>{formatNumberWithLeadingZero(countdown.days)}</p>
-              <p className='flex justify-center text-base pt-4'>Days</p>
+              <p className=' flex justify-center font-goblin '>{formatNumberWithLeadingZero(countdown.days)}</p>
+              <p className='flex justify-center  pt-4 font-goblin'>Days</p>
               </div>
               <div>
-              <p className=' flex justify-center'>{formatNumberWithLeadingZero(countdown.hours)}</p>
-              <p className='flex justify-center text-base pt-4'>Hours</p>
+              <p className=' flex justify-center font-goblin'>{formatNumberWithLeadingZero(countdown.hours)}</p>
+              <p className='flex justify-center  pt-4 font-goblin'>Hours</p>
               </div>
               <div>
-              <p className=' flex justify-center'>{formatNumberWithLeadingZero(countdown.minutes)}</p>
-              <p className='flex justify-center text-base pt-4'>Minutes</p>
+              <p className=' flex justify-center font-goblin'>{formatNumberWithLeadingZero(countdown.minutes)}</p>
+              <p className='flex justify-center  pt-4 font-goblin'>Minutes</p>
               </div>
               <div>
-              <p className=' flex justify-center'>{formatNumberWithLeadingZero(countdown.seconds)}</p>
-              <p className='flex justify-center text-base pt-4'>Seconds</p>
+              <p className=' flex justify-center font-goblin'>{formatNumberWithLeadingZero(countdown.seconds)}</p>
+              <p className='flex justify-center  pt-4 font-goblin'>Seconds</p>
               </div>
               
               
             </div>
-            <div className=" flex justify-center text-3xl mt-12 gap-12 flex-wrap">เตรียมพบกับมหกรรมการแข่งขันที่เฟี้ยวฟ้าวที่สุดในไอทีลาดกระบังใน</div>
+            
             
           </div>
+          
         </>
-      )}
+      
 
     </div>
 
