@@ -14,20 +14,11 @@ function Agenda() {
           let { data } = await axios('https://itgg-core.iservkmitl.tech/api/v1/lives')
           
           setDatas(data.items)
-          
-
-          
-          
       }
       catch (e) {
           console.log(e)
       }
-      
   }
- 
-  
-  
-  
   const dateActivity = (date) => {
     setFilterdata(datas.filter(item => item.Date === date))
     console.log(filterdata)
@@ -65,9 +56,18 @@ function Agenda() {
     const uniqueDatesSet = new Set(datas.map(item => item.Date));
     setUniqueDates(sortDates([...uniqueDatesSet]));
     // setData([...new Set(info.map(info => info.Date.slice(0, 5)))])
-    
+   
     
 }, [datas])
+const addLineBreaks = (text) => {
+  return text.split('\n').map((line, index) => (
+    <React.Fragment key={index}>
+      {line}
+      <br />
+    </React.Fragment>
+  ));
+};
+
 
   return (
     <>
@@ -111,7 +111,7 @@ function Agenda() {
                           <div className='p-4'>
                             <div className='text-xl font-goblin'> {item.Content.Time}</div>
                             <div className='text-5xl font-goblin pt-1'> {item.Content.Name}</div>
-                            <div className='text-xxl font-goblin pt-2'>{item.Content.Description}</div>
+                            <div className='text-xxl font-goblin pt-2'>{addLineBreaks(item.Content.Description)}</div>
                           </div>
                         
                      </div>
