@@ -101,7 +101,7 @@ const addLineBreaks = (text) => {
           </div>
           </div>
         
-        <div className='m-3 lg:mt-44 lg:w-1/2 text-black flex flex-col justify-start bg-[#F4F1BB] rounded-xl'>
+        <div className='m-3 lg:mt-44 lg:w-1/2 text-black flex flex-col justify-start bg-[#F4F1BB] rounded-xl '>
           {filterdata.length == 0 ? <></> :
             filterdata.map((item, index) => {
               return (
