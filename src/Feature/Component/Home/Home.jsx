@@ -39,7 +39,7 @@ function Home() {
     }, [])
     return (
         <>
-        <div className=' text-white justify-center flex flex-row md:text-8xl text-4xl font-extrabold  mt-14 flex-wrap text-center'>
+        <div className=' text-white justify-center flex flex-row lg:text-9xl md:text-8xl text-6xl font-extrabold  mt-14 flex-wrap text-center'>
             <p className='font-goblin text-[#61ABFF] '>I</p>
             <p className='font-goblin text-[#68D4A0] '>T</p>
             <p className='font-goblin text-[#E86C67]'>G</p>
