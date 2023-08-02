@@ -14,13 +14,14 @@ export default {
         },
       }),
 
-      fontFamily: {
-        Athiti: ["Athiti", "sans-serif"],
-        Krub: ["Kryb", "sans-serif"],
-        goblin: ["Goblin One", 'cursive'],
-        georgia: ["Georgia", "serif"],
-        Kanit:["Kanit","sans-serif"]
-      },
+    fontFamily :{
+      'Athiti': ['sans-serif'],
+      'Krub': ["sans-serif"],
+      'goblin': ["Goblin One"],
+      'georgia': ['Georgia', 'serif'],
+      'Kanit': ['Kanit', 'sans-serif']
+
+    }
     },
   },
   plugins: [],
