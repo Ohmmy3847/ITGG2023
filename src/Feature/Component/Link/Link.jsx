@@ -7,13 +7,13 @@ export function Link() {
 
     return (
         <>
-            <div className="flex  justify-center lg:gap-24 gap-4 bg-slate-800 lg:h">
+            <div className="flex  justify-center lg:gap-24 gap-4 bg-slate-800 ">
                 {noUrldata.map((item, index) => {
                     return (
                         <>
-                            <div className='mt-4 mb-4 cursor-pointer' onClick={() => window.location.href = item.URL} >
-                                <img  src={item.imgURL} className='w-24 rounded-full'/>
-                                <p className="text-center text-xl text-white">{item.nameURL}</p>
+                            <div className='mt-4 mb-4 cursor-pointer' key={index} onClick={() => window.location.href = item.URL} >
+                                <img key={index} src={item.imgURL} className='w-12 rounded-full'/>
+                            
                             </div>
                         </>
                     )

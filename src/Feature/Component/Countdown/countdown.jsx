@@ -42,22 +42,22 @@ function Countdown() {
   }, []);
 
 
-  if (!CountdownReady) {
-    return <>
-    <div className='divcountdown'>
-      <p>Loading...</p>
+  // if (!CountdownReady) {
+  //   return <>
+  //   <div className='divcountdown font-goblin'>
+  //     <p>Loading...</p>
 
-    </div>
-    </>
-  }
+  //   </div>
+  //   </>
+  // }
   return (
     <div>
       
         <>
-          <div className='text-white font-bold md:mt-20 mt-8'>
+          <div className='text-white font-bold md:mt-20 mt-8 animate-fade'>
             
 
-            <div className=" flex justify-center sm:text-3xl md:text-4xl text-xl md:gap-24 lg:gap-28 lg:text-5xl xl:gap-32 xl:text-6xl gap-6 flex-wrap ">
+            <div className=" flex justify-center sm:text-2xl md:text-2xl text-xs md:gap-12 lg:gap-28 lg:text-5xl xl:gap-32 xl:text-4xl gap-6 flex-wrap ">
               <div >
               <p className=' flex justify-center font-goblin xl:text-6xl lg:text-5xl md:text-4xl sm:text-3xl text-2xl '>{formatNumberWithLeadingZero(countdown.days)}</p>
               <p className='flex justify-center  pt-4 font-goblin'>Days</p>

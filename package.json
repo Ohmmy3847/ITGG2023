@@ -11,12 +11,15 @@
   },
   "dependencies": {
     "@react-icons/all-files": "^4.1.0",
+    "@react-spring/parallax": "^9.7.3",
+    "@react-spring/web": "^9.7.3",
     "apexcharts": "^3.41.0",
     "axios": "^1.4.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-icons": "^4.10.1",
-    "react-image": "^4.1.0"
+    "react-image": "^4.1.0",
+    "react-spring": "^9.7.2"
   },
   "devDependencies": {
     "@types/react": "^18.2.15",
