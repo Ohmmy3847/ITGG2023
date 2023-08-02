@@ -58,7 +58,7 @@ function Home() {
                             if (index == 0) {
                                 
                                 return (
-                                    <div className="flex  flex-row w-full pt-8 pb-8" key={index} style={{
+                                    <div className="flex animate-fade flex-row w-full pt-8 pb-8" key={index} style={{
                                         background: `linear-gradient(110deg, ${item.hex} 60%, #F4F1BB 40%)`,
                                     }}>
                                         <div className='ml-2 sm:w-4/5 w-3/5'>
@@ -89,21 +89,21 @@ function Home() {
                             if (index != 0) {
 
                             return (
-                                <div className="flex flex-col gap-y-4 w-full mx-auto pb-8 pt-8" key={index} style={{
+                                <div className="animate-fade flex flex-col gap-y-4 w-full mx-auto pb-8 pt-8" key={index} style={{
                                     backgroundColor: item.hex,
                                 }}>
                                     <div className='flex lg:flex-col flex-row gap-y-4 w-full lg:items-center lg:gap-0 md:gap-44 sm:gap-7 gap-12 lg:pl-0  md:pl-32 sm:pl-24 pl-10'>
-                                        <div className='text-center'>
-                                        <div className='font-goblin lg:text-4xl md:text-5xl sm:text-4xl text-2xl   text-[#F4F1BB]  '>{[index + 1]}{place[index]} PLACE</div>
-                                        <div className='rounded-full bg-[#D9D9D9] lg:w-44 lg:h-44 md:h-52 md:w-52 sm:w-44 sm:h-44 h-32 w-32 flex items-center justify-center mt-4'>
-                                        <img className=" flex  object-fill  top-0 h-4/5 " src={item?.mascotURL ? item.mascotURL : "../../../../public/cutecat.png"} />
-                                        </div>
+                                            <div className='text-center'>
+                                            <div className='font-goblin lg:text-4xl md:text-5xl sm:text-4xl text-2xl   text-[#F4F1BB]  '>{[index + 1]}{place[index]} PLACE</div>
+                                            <div className='rounded-full bg-[#D9D9D9] lg:w-44 lg:h-44 md:h-52 md:w-52 sm:w-44 sm:h-44 h-32 w-32 flex items-center justify-center mt-4'>
+                                                <img className=" flex  object-fill  top-0 h-4/5 " src={item?.mascotURL ? item.mascotURL : "../../../../public/cutecat.png"} />
+                                            </div>
                                         </div>
     
                                         <div className='md:text-left sm:text-left text-left font '>
-                                        <div className='text-[#F4F1BB] lg:hidden font-goblin md:text-5xl sm:text-3xl text-3xl md:mt-16 sm:mt-16 mt-16 '>GATE {item.gate_name}</div>
-                                        <div className='text-white font-goblin flex lg:justify-center justify-start gap-2  md:text-3xl sm:text-2xl  text-l md:mt-6 sm:mt-4 mt-2'><span className='font-goblin'>{THDollor.format(item.token_amount).replace('฿', '').split('.')[0]}</span> <FaCoins className="text-yellow-300" /></div>
-                                        <div className='text-white font-goblin md:text-3xl sm:text-2xl  text-l md:mt-2'>{isNaN((item.token_amount/tokensum * 100).toFixed(0)) ? 0 : (item.token_amount/tokensum * 100).toFixed(0)} % winrate</div>
+                                            <div className='text-[#F4F1BB] lg:hidden font-goblin md:text-5xl sm:text-3xl text-3xl md:mt-16 sm:mt-16 mt-16 '>GATE {item.gate_name}</div>
+                                            <div className='text-white font-goblin flex lg:justify-center justify-start gap-2  md:text-3xl sm:text-2xl  text-l md:mt-6 sm:mt-4 mt-2'><span className='font-goblin'>{THDollor.format(item.token_amount).replace('฿', '').split('.')[0]}</span> <FaCoins className="text-yellow-300" /></div>
+                                            <div className='text-white font-goblin md:text-3xl sm:text-2xl  text-l md:mt-2'>{isNaN((item.token_amount/tokensum * 100).toFixed(0)) ? 0 : (item.token_amount/tokensum * 100).toFixed(0)} % winrate</div>
                                         </div>
                                     </div>
                             </div>
