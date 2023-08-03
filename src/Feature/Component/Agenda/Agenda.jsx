@@ -86,7 +86,7 @@ const addLineBreaks = (text) => {
    
     <div className='w-full animate-fade'>
 
-    <div className=' flex lg:flex-row flex-col lg:gap-42   '>
+    <div className=' flex lg:flex-row flex-col lg:gap-42 lg:ml-10  '>
       <div className='p-5 mt-6  text-white md:text-6xl text-3xl font-extrabold font-goblin '>
         <div className='text-center md:text-5xl md:text-center lg:text-left text-3xl font-goblin lg:pl-8'>AGENDA</div>
         
