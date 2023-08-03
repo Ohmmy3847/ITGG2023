@@ -65,7 +65,7 @@ function Home() {
                                     <div className="animate-fade flex flex-row w-full pt-8 pb-8" key={index} style={{
                                         background: `linear-gradient(110deg, ${item.hex} 60%, #F4F1BB 40%)`,
                                     }}>
-                                        <div className='ml-2 sm:w-4/5 w-3/5'>
+                                        <div className='ml-2 sm:w-4/5 w-4/6'>
                                             <div className='flex flex-col gap-y-2 w-4/5 mx-auto pl-2'>
                                                 <div className=' text-base lg:text-6xl font-goblin text-[#F4F1BB] lg:mt-12 md:text-3xl md:mt-12 sm:text-3xl sm:mt-6'>FIRST PLACE</div>
                                                 <div className='font-goblin text-shadow text-base lg:text-6xl lg:mt-6 md:text-3xl md:mt-8 sm:text-3xl sm:mt-6' style={{color: item.hex}}>FIRST PLACE</div>
