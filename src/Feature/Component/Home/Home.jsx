@@ -43,6 +43,7 @@ function Home() {
     }
     return (
         <>
+        <div className='lg:mb-12 mb-7'>
         <div className=' text-white justify-center flex flex-row lg:text-8xl md:text-7xl sm:text-6xl text-4xl font-extrabold  mt-14 flex-wrap text-center animate-fade'>
             <p className='font-goblin text-[#61ABFF] '>I</p>
             <p className='font-goblin text-[#68D4A0] '>T</p>
@@ -54,7 +55,7 @@ function Home() {
             มหกรรมการแข่งขัน ที่ยิ่งใหญ่ที่สุดในไอทีลาดกระบังจะจบลงในอีก
             </div>
             <Countdown/>
-            <div className='flex flex-col w-full pt-24  font-extrabold font-Krub'>
+            <div className='flex flex-col w-full pt-14  font-extrabold font-Krub'>
                 <div>
                     {
                         info.map((item, index) => {
@@ -109,8 +110,8 @@ function Home() {
     
                                         <div className='md:text-left sm:text-left text-left lg:ml-0 md:ml-0 sm:ml-16 '>
                                             <div className='text-[#F4F1BB] lg:hidden font-goblin md:text-3xl sm:text-xl text-lg md:mt-16 sm:mt-16 mt-16 '>GATE {item.gate_name}</div>
-                                            <div className='text-white font-goblin flex lg:justify-center justify-start gap-2 md:text-l sm:text-lg text-xs md:mt-6 sm:mt-4 mt-2'><span className='font-goblin'>{THDollor.format(item.token_amount).replace('฿', '').split('.')[0]}</span> <FaCoins className="text-yellow-300" /></div>
-                                            <div className='text-white font-goblin md:text-l sm:text-lg text-xs md:mt-2'>{isNaN((item.token_amount/tokensum * 100).toFixed(0)) ? 0 : (item.token_amount/tokensum * 100).toFixed(0)} % winrate</div>
+                                            <div className='text-white font-goblin flex lg:justify-center justify-start gap-2 md:text-l sm:text-lg text-xs md:mt-6 sm:mt-4 mt-2'><span className='font-goblin lg:text-2xl'>{THDollor.format(item.token_amount).replace('฿', '').split('.')[0]}</span> <FaCoins className="text-yellow-300" /></div>
+                                            <div className='text-white font-goblin lg:text-lg md:text-xs sm:text-lg text-xs md:mt-2'>{isNaN((item.token_amount/tokensum * 100).toFixed(0)) ? 0 : (item.token_amount/tokensum * 100).toFixed(0)} % winrate</div>
                                         </div>
                                     </div>
                             </div>
@@ -120,7 +121,9 @@ function Home() {
                     }
                 </div>
             </div>
+            
             <Agenda/>
+            </div>
            {/* <Link/> */}
         </>
     )
