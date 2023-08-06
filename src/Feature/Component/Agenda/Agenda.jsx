@@ -87,12 +87,12 @@ const addLineBreaks = (text) => {
     <div className='w-full animate-fade'>
 
     <div className=' flex lg:flex-row flex-col lg:gap-42 lg:ml-10  '>
-      <div className='p-5 mt-6  text-white md:text-6xl text-3xl font-extrabold font-goblin '>
-        <div className='text-center md:text-5xl md:text-center lg:text-left text-3xl font-goblin lg:pl-8'>AGENDA</div>
+      <div className='  text-white md:text-6xl text-3xl font-extrabold font-goblin '>
+        <div className='text-center md:text-6xl md:text-center lg:text-left text-3xl font-goblin lg:pl-8'>AGENDA</div>
         
         <div className='lg:text-xl sm:text-xl text-sm text-center lg:text-left pt-3 font-Kanit lg:pl-8'>ติดตามปฏิทินกิจกรรม ITGG 2023 ได้ที่นี่เลยยยยย!!!</div>
       <div className='flex justify-center lg:gap-64 md:gap-6 lg:flex-row flex-col '>
-        <div className='mt-5 gap-3 flex lg:flex-col flex-row  justify-center flex-wrap '>
+        <div className='lg:mt-5 mt-2 gap-3 flex lg:flex-col flex-row  justify-center flex-wrap '>
           {
             uniqueDates.map((item, index) => {
             return (

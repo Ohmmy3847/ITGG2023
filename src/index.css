@@ -32,10 +32,19 @@ body {
   /* background-image: url("./assets/362457478_1484646572304761_8332109809850964109_n.jpg"); */
   background-size: cover; /* This will scale the image to cover the entire container */
   background-repeat: repeat;
-
+  animation: changeBackgroundColor 30s infinite;
 
   /* Set the height of the container */
   height: 100%; /* Adjust this value as needed */
+}
+@keyframes changeBackgroundColor {
+  0%, 100% {
+    background-color: rgba(21, 80, 115, 1); /* Start and end with the original color */
+  }
+ 
+  75% {
+    background-color: rgba(3, 43, 66, 1); /* Transition to a darker shade */
+  }
 }
 
 code {

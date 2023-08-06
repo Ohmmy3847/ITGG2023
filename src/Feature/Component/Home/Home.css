@@ -37,3 +37,20 @@
     transform: translateY(-10px);
   }
 }
+.color-changing-background {
+
+  animation: changeBackgroundColor 10s infinite; /* Apply the animation */
+}
+
+/* Define the animation keyframes */
+@keyframes changeBackgroundColor {
+  0% {
+    background-color: #155073; /* Start with the original color */
+  }
+  50% {
+    background-color: #a2c0d7; /* Transition to a lighter shade */
+  }
+  100% {
+    background-color: #032b42; /* Transition back to a darker shade */
+  }
+}

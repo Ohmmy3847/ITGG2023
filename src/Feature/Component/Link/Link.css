@@ -1,0 +1,10 @@
+.hover-scale-up {
+   
+   
+    transition: transform 3s; /* Apply the transition property to control the animation speed */
+  }
+  
+  /* Add styles for the hover effect */
+  .hover-scale-up:hover {
+    transform: scale(1.2); /* Increase the scale of the element on hover */
+  }

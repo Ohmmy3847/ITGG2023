@@ -121,7 +121,7 @@ function Home() {
                     }
                 </div>
             </div>
-            
+            <Link/>
             <Agenda/>
             </div>
            {/* <Link/> */}
