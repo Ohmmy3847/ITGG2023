@@ -12,8 +12,8 @@ export function Link() {
                 {noUrldata.map((item, index) => {
                     return (
                         <>
-                            <div className='cursor-pointer hover-scale-up '  key={index} onClick={() => window.location.href = item.URL} >
-                                <img key={index} src={item.imgURL} className='lg:w-48  md:w-36 sm:w-24 w-16 rounded-full border-black lg:border-8 border-4 '/>
+                            <div className='cursor-pointer hover-scale-up hover:animate-pulse'  key={index} onClick={() => window.location.href = item.URL} >
+                                <img key={index} src={item.imgURL} className='object-cover lg:w-48 lg:h-48  md:w-36 md:h-36 sm:w-24 sm:h-24 w-16 h-16 rounded-full border-black lg:border-8 border-4 '/>
                             
                             </div>
                         </>
@@ -33,8 +33,7 @@ const noUrldata = [
     {
         "nameURL": "ROV",
         "URL": "https://challonge.com/th/ITGG2023",
-        "imgURL": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQRD28bsPk9NdYW-DIzboddYLn8Df9K0I0rtMcQNHjEoChbMHjvhbkgcRT-IUsDMRh3iJc&usqp=CAU"
-
+        "imgURL": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTyfvbCeTCPXt2sr2vKlfCYz5gfp3T7F-cEhg&usqp=CAU"
     },
     {
         "nameURL": "Instagram",
