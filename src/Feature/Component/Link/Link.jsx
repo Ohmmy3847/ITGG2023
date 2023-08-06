@@ -26,7 +26,7 @@ export function Link() {
 const noUrldata = [
     {
         "nameURL": "Valorant",
-        "URL": "https://challonge.com/th/ITGG2023",
+        "URL": "https://challonge.com/th/ITGG21",
         "imgURL": "https://seeklogo.com/images/V/valorant-logo-FAB2CA0E55-seeklogo.com.png"
 
     },
