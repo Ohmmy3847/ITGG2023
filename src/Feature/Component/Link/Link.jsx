@@ -8,12 +8,12 @@ export function Link() {
 
     return (
         <>
-            <div className="flex  justify-center lg:gap-24 md:gap-12  lg:mt-16 lg:mb-16 gap-5 mt-12 mb-12">
+            <div className="flex  justify-center lg:gap-24 md:gap-12  lg:mt-16 lg:mb-16 gap-4 mt-12 mb-12">
                 {noUrldata.map((item, index) => {
                     return (
                         <>
                             <div className='cursor-pointer hover-scale-up hover:animate-pulse'  key={index} onClick={() => window.location.href = item.URL} >
-                                <img key={index} src={item.imgURL} className='object-cover lg:w-48 lg:h-48  md:w-36 md:h-36 sm:w-24 sm:h-24 w-16 h-16 rounded-full border-black lg:border-8 border-4 '/>
+                                <img key={index} src={item.imgURL} className='object-cover lg:w-36 lg:h-36  md:w-24 md:h-24 sm:w-16 sm:h-16 w-14 h-14 rounded-full border-black lg:border-8 border-4 '/>
                             
                             </div>
                         </>
@@ -45,5 +45,11 @@ const noUrldata = [
         "nameURL": "Facebook",
         "URL": "https://www.facebook.com/InfoTechGateGame",
         "imgURL": "https://www.facebook.com/images/fb_icon_325x325.png"
+    },
+    {
+        "nameURL": "Discord",
+        "URL": "https://discord.gg/dGMXJPdmua",
+        "imgURL": "https://images-eds-ssl.xboxlive.com/image?url=Q_rwcVSTCIytJ0KOzcjWTYl.n38D8jlKWXJx7NRJmQKBAEDCgtTAQ0JS02UoaiwRCHTTX1RAopljdoYpOaNfVf5nBNvbwGfyR5n4DAs0DsOwxSO9puiT_GgKqinHT8HsW8VYeiiuU1IG3jY69EhnsQ--&format=source"
+
     },
 ]
