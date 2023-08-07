@@ -43,7 +43,7 @@ function Home() {
     }
     return (
         <>
-        <div className='lg:mb-12 mb-7 color-changing-background'>
+        <div className='lg:mb-12 mb-7'>
         <div className=' text-white justify-center flex flex-row lg:text-8xl md:text-7xl sm:text-6xl text-4xl font-extrabold  mt-14 flex-wrap text-center animate-fade'>
             <p className='font-goblin text-[#61ABFF] '>I</p>
             <p className='font-goblin text-[#68D4A0] '>T</p>
