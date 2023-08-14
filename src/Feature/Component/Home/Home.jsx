@@ -103,7 +103,7 @@ function Home() {
                                     <div className='flex lg:flex-col flex-row gap-y-4 w-full lg:items-center lg:gap-0 md:gap-24 sm:gap-7 gap-2 lg:pl-0  md:pl-32 sm:pl-24 pl-10'>
                                             <div className='text-center'>
                                             <div className='font-goblin lg:text-2xl md:text-3xl sm:text-l text-lg text-[#F4F1BB] '>{[index + 1]}{place[index]} PLACE</div>
-                                            <div className='font-goblin lg:text-2xl md:text-3xl sm:text-l text-lg text-[#F4F1BB] pt-4'>GATE {item.gate_name}</div>
+                                            <div className='font-goblin lg:text-2xl md:text-3xl sm:text-l text-lg text-[#F4F1BB] pt-4 hidden lg:block'>GATE {item.gate_name}</div>
                                             <div className='rounded-full bg-[#D9D9D9] lg:w-44 lg:h-44 md:h-52 md:w-52 sm:w-44 sm:h-44 h-32 w-32 flex items-center justify-center mt-4'>
                                                 <img className=" flex  object-top top-0 h-4/5 " src={item?.mascotURL ? item.mascotURL : "../../../../public/cutecat.png"} />
                                             </div>
